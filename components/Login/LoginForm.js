@@ -3,6 +3,11 @@ import {View, Text, TextInput, TouchableOpacity, StyleSheet} from 'react-native'
 import CheckBox from 'react-native-checkbox';
 
 class LoginForm extends Component {
+
+    onPress = () => {
+        this.props.navigation.navigate('List');
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -26,6 +31,7 @@ class LoginForm extends Component {
                 />
                 <TouchableOpacity
                     style={styles.button}
+                    onPress={this.onPress.bind(this)}
                 >
                     <Text
                         style={styles.buttonText}

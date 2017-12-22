@@ -5,11 +5,14 @@ import Explain from './Explain';
 import Logo from './Logo';
 
 class Login extends Component {
+    constructor(props) {
+        super(props);   
+    }
     render() {
         return (
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
                 <Logo />
-                <LoginForm/>
+                <LoginForm navigation={this.props.navigation}/>
                 <Explain/>
             </KeyboardAvoidingView>
         );
